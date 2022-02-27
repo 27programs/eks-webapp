@@ -49,7 +49,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-                    <finalName>springboot-example</finalName>
+                    <finalName>eks-webapp</finalName>
 				</configuration>
 			</plugin>
 		</plugins>

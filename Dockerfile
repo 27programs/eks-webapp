@@ -1,3 +1,7 @@
-FROM adoptopenjdk/openjdk11:alpine-jre
-ADD target/springboot-example.jar app.jar
+FROM openjdk:latest
+
+ADD target/eks-webapp.jar app.jar
+
 ENTRYPOINT ["java","-jar","app.jar"]
+
+EXPOSE 8080

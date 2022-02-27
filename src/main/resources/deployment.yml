@@ -1,20 +1,21 @@
 apiVersion: apps/v1 
 kind: Deployment    
 metadata:              
-  name: springboot-k8s
+  name: nukg-website
 spec:                
   selector:         
     matchLabels:
-      app: springboot-k8s
-  replicas: 3        
+      app: nukg-website
+  replicas: 2
   template:
     metadata:
+      name: nukg-website
       labels:        
-        app: springboot-k8s
+        app: nukg-website
     spec:
       containers:
-        - name: springboot-k8s
-          image: springboot-k8s:1.0
+        - name: nukg-website
+          image: 416175598939.dkr.ecr.us-east-1.amazonaws.com/nukg-website:latest
           ports:
             - containerPort: 8080
 

@@ -1,16 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: springboot-k8s
+  name: nukg-website
   labels:
-    name: springboot-k8s
+    app: nukg-website
 spec:
   ports:
-    - nodePort: 30163 
-      port: 8080      
+    - name : nukg-website
+      port: 80
       targetPort: 8080  
       protocol: TCP
-  selector:           
-    app: springboot-k8s
-  type: NodePort       
+  selector:
+    app: nukg-website
+  type: LoadBalancer
 
